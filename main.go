@@ -184,7 +184,13 @@ func BotUpdateLoop(my_bot *tgbotapi.BotAPI, database *sql.DB) {
 					"Miłego użytkowania! :)\n"
 				msg.ReplyMarkup = numericKeyboard
 			} else {
-				msg.Text = "Już ci poznałem"
+				msg.Text = "Cześć. Tutaj możesz postawić anonimowe pytanie lub odpowiedzieć na inne anonimowe pytania.\n\n" +
+					"Żeby zadać pytanie - użyj przycisku \"Zapytać\" lub komendy /new_question, następnie podaj tekst pytania. Po wysłaniu pytania do bota, program przetworze twoje pytanie, przypisze do niego unikatowy ID" +
+					"oraz wyśle go do innych anonimów. Dziennie możesz zapytać nie więcej niż 3 pytania.\n\n" + "Jeżeli chcesz odpowiedzieć na pytanie - " +
+					"użyj przycisku \"Dać odpowiedź\" lub komendy /answer_question, po czym bot poprosi ci o podanie numeru ID tego pytanie, na które chcesz odpowiedzieć (numer ID każdego pytania jest pisany w końcu tego pytania).\n\n" +
+					"Dalej podaj swoją odpowiedź, która zostanie wysłana tylko i wyłącznie do człowieka, który te pytanie zapytał.\n\n" +
+					"Jeżeli masz pytania lub propozycje - pisz do mnie @YUART. Również możesz zajść na mojego Patreona (https://www.patreon.com/artemkakun) i kupić mi kebaba :)\n\n" +
+					"Miłego użytkowania! :)\n"
 				msg.ReplyMarkup = numericKeyboard
 			}
 		case "new_question":
