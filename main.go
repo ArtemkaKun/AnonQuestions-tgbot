@@ -235,7 +235,7 @@ func BotUpdateLoop(my_bot *tgbotapi.BotAPI, database *sql.DB) {
 }
 
 func DBStart() *sql.DB {
-	my_db, err := sql.Open("mysql", "root:1337@/anonyquestions")
+	my_db, err := sql.Open("mysql", "root:11hahozeGood!@/anonyquestions")
 	if err != nil {
 		log.Panic(err)
 	} else {
