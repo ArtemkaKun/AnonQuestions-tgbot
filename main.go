@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-const ADMIN int64 = 375806606
+const ADMIN int64 = ADMIN_ID_HERE
 
 func main() {
 	bot := BotStart()
@@ -235,7 +235,7 @@ func BotUpdateLoop(my_bot *tgbotapi.BotAPI, database *sql.DB) {
 }
 
 func DBStart() *sql.DB {
-	my_db, err := sql.Open("mysql", "root:11hahozeGood!@/anonyquestions")
+	my_db, err := sql.Open("mysql", "root:db pass here@/anonyquestions")
 	if err != nil {
 		log.Panic(err)
 	} else {
